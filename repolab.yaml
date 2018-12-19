@@ -2,5 +2,5 @@ name: range_libc
 
 base:
   system: ubuntu
-  version: 18.04
-  cuda: 10.0
+  version: 16.04
+  cuda: 8.0
