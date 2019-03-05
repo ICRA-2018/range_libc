@@ -1,6 +1,0 @@
-name: range_libc
-
-base:
-  system: ubuntu
-  version: 16.04
-  cuda: 8.0

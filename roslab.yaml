@@ -1,0 +1,17 @@
+name: range_libc
+
+base:
+  ubuntu: 16.04
+  cuda: 8.0-devel
+  ros: kinetic-ros-base
+
+build: cmake
+
+apt:
+  - python-dev
+  - ros-kinetic-common-msgs
+  - ros-kinetic-tf
+
+pip:
+  - cython
+  - numpy
