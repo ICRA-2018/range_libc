@@ -1,4 +1,6 @@
 # RangeLibc
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/range-libc.svg)](https://hub.docker.com/r/icra2018/range-libc)
+<a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
 
 This library provides for different implementations of 2D raycasting for 2D occupancy grids, including the Compressed Directional Distance Transform (CDDT) algorithm as proposed in [this publication](http://arxiv.org/abs/1705.01167). The code is written and optimized in C++, and Python wrappers are also provided.
 
@@ -364,3 +366,17 @@ Calc range: O(1)
 1.  J. Bresenham. "Algorithm for Computer Control of a Digital Plotter," IBM Systems Journal, vol. 4, no. 1, pp. 25-30, 1965.
 2.  K. Perlin and E. M. Hoffert. "Hypertexture," Computer Graphics, vol 23, no. 3, pp. 297-306, 1989.
 3. M. Pharr, and R. Fernando. "Chapter 8. Per-Pixel Displacement Mapping with Distance Functions" in GPU gems 2: Programming techniques for high-performance graphics and general-purpose computation, 3rd ed. United States: Addison-Wesley Educational Publishers, 2005.
+
+# How to Run with Docker
+## Linux
+#### Prerequisites
+* NVIDIA GPU with CUDA support
+* [nvidia-docker 2.0](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
+
+Tested on Ubuntu 16.04.6 with Docker 18.06.1-ce, GPU GeForce 940M, NVIDIA Driver version 410.48.
+
+1. Open a terminal and run the command:
+```
+nvidia-docker run --rm -p 8888:8888 icra2018/range-libc:latest
+```
+2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
